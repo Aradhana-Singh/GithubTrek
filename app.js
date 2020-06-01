@@ -32,6 +32,6 @@ app.post('/explore' , function(req,res){
         });
     }
 });
-app.listen(5500 , function(){
+app.listen( process.env.PORT ||5500 , function(){
     console.log("Server Started");
 });
