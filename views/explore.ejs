@@ -1,0 +1,56 @@
+<%- include('partials/header.ejs') %>
+
+
+<div id="contain">
+    <form action="/explore" method="POST">
+        <div class="row">
+            <div class="col-10 text-center">
+                <label class="col-form-label">Enter Github Username</label>
+            </div>
+            <div class="col-10">
+                <input type="text" class="form-control" name="userName" placeholder="Github Username">
+            </div>
+            <div class="col-auto text-center">
+                <button class="btn form-control"> Submit </button>
+            </div>
+        </div>
+    </form>
+    <% if(data != null ) { %>
+            <div id = "card1" class="row">
+                <div  class=" col-md-6 col-sm-12 text-center">
+                    <img class="avatar " src=" <%= data.avatar_url %> " alt="No pic"> 
+                    <div> <%= data.name %> </div>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <ul>
+                        <li class="row">
+                            <span class="col-6"> Username: </span>
+                            <span class=" col-6 float-right"> <%= data.login %> </span>
+                        </li>
+                        <li class="row">
+                            <span class="col-6"> Bio: </span>
+                            <span class=" col-6 float-right"> <%= data.bio%> </span>
+                        </li>
+                        <li class="row">
+                                <span class="col-6"> Followers: </span>
+                                <span class="col-6 float-right"> <%= data.followers %> </span>
+                        </li>
+                        <li class="row">
+                            <span class="col-6"> Following: </span>
+                            <span class="col-6 float-right"> <%= data.following %> </span>
+                        </li>
+                        <li class="row">
+                            <span class="col-6"> Public Repos: </span>
+                            <span class="col-6 float-right"> <%= data.public_repos %> </span>
+                        </li>
+                        <li class="row">
+                            <span class="col-6"> Email: </span>
+                            <span class="col-6 float-right"> <%= data.email %> </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    <% } %>
+</div>
+
+<%- include('partials/footer.ejs') %>

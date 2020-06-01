@@ -1,0 +1,68 @@
+body{
+    font-family: 'Concert One', cursive;
+    color: rgb(148, 210, 247);
+}
+a{
+    font-family: 'Concert One', cursive;
+    color: rgb(148, 210, 247);
+    font-weight: 600;
+    font-size: 20px;
+}
+.btn{
+    font-family: 'Concert One', cursive;
+    color: rgb(148, 210, 247);
+    background: none;
+    font-weight: 600;
+    font-size: 20px;
+    box-sizing: border-box;
+    height: 40px;
+    padding-top: 1px;
+    border: 2px solid rgb(148, 210, 247);
+    transition: transform .6s; 
+}
+#contain{
+    width:70%;
+    margin: auto;
+}
+#card1{
+    color: #084468;
+    font-weight: 400;
+    font-size: 20px;
+    padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin: 50px auto;
+    border-radius: 8px;
+    background-color:rgba(251, 226, 218, 99);
+}
+.btn:hover { 
+    transform: scale(1.2);
+    color: rgb(148, 210, 247);
+}
+ul{
+    list-style: none;
+}
+.avatar{
+    border-radius: 35%;
+    width: 250px;
+    border: 1px solid salmon;
+}
+
+
+
+
+
+
+
+
+
+
+.pic:hover{
+    animation: shake .1s;
+    animation-iteration-count: infinite;
+}
+@keyframes shake {
+    0% { transform: rotate(0.5deg); }
+    50% { transform: rotate(-0.5deg); }
+    100% { transform: rotate(0.5deg); }
+  }
